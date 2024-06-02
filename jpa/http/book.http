@@ -1,0 +1,22 @@
+### GET All Books
+GET localhost:8080/books
+###
+
+### Create  Books
+POST localhost:8080/books
+Content-Type: application/json
+
+{
+  "author": "bob",
+  "isbn": "content"
+}
+
+### Update Book
+PUT localhost:8080/books/1
+Content-Type: application/json
+
+{
+"author": "bob2",
+"isbn": "content2"
+}
+###

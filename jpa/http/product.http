@@ -1,0 +1,44 @@
+# Get All Products
+#GET localhost:8080/products
+
+# Create Product
+#POST localhost:8080/products
+#Content-Type: application/json
+#
+#{
+#  "productName": "Macbook",
+#  "price": 40000
+#}
+
+#POST localhost:8080/products
+#Content-Type: application/json
+#
+#{
+#"productName": "Airpod",
+#"price": 8000
+#}
+
+#POST localhost:8080/products
+#Content-Type: application/json
+#
+#{
+#"productName": "Iphone",
+#"price": 40000
+#}
+
+# Get Product By name
+#GET localhost:8080/products/name?product_name=Iphone2
+#Accept: application/json
+
+# Get Product Top 2  OrderByPrice
+#GET localhost:8080/products/top
+#Accept: application/json
+
+# Get All Product Names
+#GET localhost:8080/products/all-name
+
+#GET localhost:8080/products/only-name
+
+#GET localhost:8080/products/sort
+
+GET localhost:8080/products/page?page=1&size=1
