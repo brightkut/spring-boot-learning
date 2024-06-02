@@ -1,22 +1,31 @@
 package com.brightkut.concurrency;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.time.Instant;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
 
 @Service
 public class ConcurrencyService {
 
+    private final Executor taskExecutor;
+
+    public ConcurrencyService(@Qualifier("taskExecutor") Executor taskExecutor) {
+        this.taskExecutor = taskExecutor;
+    }
+
     public String doConcurrencyProcess() {
         Instant start = Instant.now();
-        // Perform result-producing task
-        CompletableFuture<String> future = CompletableFuture.supplyAsync(this::doProcess1)
+        // Perform Parallelism task
+        // add taskExecutor = to custom config thread pool (use case: we need to concern about CPU/IO)
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(this::doProcess1, taskExecutor)
                 .exceptionally(ex-> "error1");
-        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(this::doProcess2)
+        CompletableFuture<String> future2 = CompletableFuture.supplyAsync(this::doProcess2, taskExecutor)
                 .exceptionally(ex-> "error2");
-        CompletableFuture<String> future3 = CompletableFuture.supplyAsync(this::doProcess3)
+        CompletableFuture<String> future3 = CompletableFuture.supplyAsync(this::doProcess3, taskExecutor)
                 .exceptionally(ex-> "error3");
 
         CompletableFuture<Void> allCompleted = CompletableFuture.allOf(future,future2,future3);
