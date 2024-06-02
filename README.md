@@ -8,7 +8,6 @@ This project will explain about the best practices and technique that you can us
 ## Learn Spring JPA
 
 ---
-
 ### Topic (Product)
 - Setup DB configuration for JPA
 - Build-in query of JPA (1) Top (2) OrderBy
@@ -30,7 +29,6 @@ This project will explain about the best practices and technique that you can us
 ## Learn Spring Microservice
 
 ---
-
 You can look into this repository (https://github.com/brightkut/e-commerce-springboot).
 
 ### Topic
