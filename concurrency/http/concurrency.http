@@ -1,0 +1,15 @@
+### Do Concurrency Process
+GET http://localhost:8081/concurrency/concurrency
+
+#Response1: Done process 1
+#Response2:Done process 2
+#Response3:Done process 3
+#Time Total: Time process: 10 seconds
+
+
+### Do Normal Process
+GET http://localhost:8081/concurrency/no-concurrency
+#Response1: Done process 1
+#Response2:Done process 2
+#Response3:Done process 3
+#Time Total: Time process: 17 seconds
