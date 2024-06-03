@@ -7,3 +7,12 @@ services:
       - 'POSTGRES_USER=myuser'
     ports:
       - '5432'
+
+  redis:
+    container_name: 'springboot-learning-redis'
+    hostname: redis
+    image: 'redis'
+    volumes:
+      - $PWD/redis/data:/data
+    ports:
+      - '6380:6379'

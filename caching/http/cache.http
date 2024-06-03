@@ -1,0 +1,24 @@
+### GET All Cache Name
+GET localhost:8080/redis/getAllCacheName
+###
+
+### Fix Key Cache
+GET localhost:8080/redis/fixKeyCache/fix-data
+
+### Get Value in Cache
+POST localhost:8080/redis/getCache
+Content-Type: application/json
+
+{
+ "cacheName": "test",
+  "key": "fix_key"
+}
+
+### Cache Value
+POST localhost:8080/redis/cache
+Content-Type: application/json
+
+{
+ "data": "data1",
+ "key": "key1"
+}
