@@ -48,3 +48,13 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - Performance of CompletableFuture(Parallelism) vs Normal Process
 - Custom Task Executor (configure thread pool) 
 
+## Learn Spring Caching
+
+### Topic (Redis)
+- Describe how to use each Annotation for caching
+
+### Topic (Product)
+- @Cacheable in real life (for get)
+- @CachePut in real life (for insert/update)
+- @CacheEvict in real life (for delete)
+
