@@ -1,0 +1,37 @@
+### Create Product
+POST localhost:8080/products
+Content-Type: application/json
+
+{
+  "productId": "1",
+  "productName": "Apple"
+}
+
+### Get Product By Id
+GET localhost:8080/products/1
+
+# expect : (1, Apple)
+
+### Update Product
+PUT localhost:8080/products/1
+Content-Type: application/json
+
+{
+  "productName": "Mac"
+}
+
+### expect : (1, Mac)
+
+### Get Product By Id
+GET localhost:8080/products/1
+
+### expect : (1, Apple) (because It still cache)
+
+### Delete Product By Id
+DELETE localhost:8080/products/1
+
+### Get Product By Id
+GET localhost:8080/products/1
+
+### expect : (Not found)
+### expect : (1, Mac) (if we disable @CacheEvict until cache expire)
