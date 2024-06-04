@@ -43,7 +43,7 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - Create Email Template from Html (Thymeleaf)
 - Distribute tracing (Zipkin)
 
-## Learn Spring with concurrency
+## Learn Spring With Concurrency
 
 - Performance of CompletableFuture(Parallelism) vs Normal Process
 - Custom Task Executor (configure thread pool) 
