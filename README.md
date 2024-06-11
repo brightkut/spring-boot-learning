@@ -5,7 +5,7 @@ This project will explain about the best practices and technique that you can us
 - JPA
 - Microservice
 - Concurrency
-- Caching (TO DO)
+- Caching
 - Other(TODO)(JsonAnnotation, Mapstruct, ObjectMapper, Custom Serializer/Deserializer, Time)
 - Security (TO DO)
 - Testing (TO DO)
