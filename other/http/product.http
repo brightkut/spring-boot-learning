@@ -1,0 +1,15 @@
+### Get Product
+GET localhost:8080/products
+
+### Create Product
+POST localhost:8080/products
+Content-Type: application/json
+
+{
+  "productId": "2",
+  "productName": "Macbook2",
+  "productCategory": "Electronics",
+  "description": "Apple device",
+}
+
+###  "productDescription": "Apple device"  if used this it will be null

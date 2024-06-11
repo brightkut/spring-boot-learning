@@ -58,3 +58,14 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - @CachePut in real life (for insert/update)
 - @CacheEvict in real life (for delete)
 
+## Learn Spring Other
+
+### Topic (Product)
+- @JsonProperty
+
+### Topic (User)
+- @JsonIgnore
+- @JsonIgnoreProperties
+- @JsonInclude
+
+

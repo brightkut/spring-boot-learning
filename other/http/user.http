@@ -1,0 +1,12 @@
+### GET users
+
+GET localhost:8080/users
+
+### GET users details
+GET localhost:8080/userDetails
+
+### GET users details 2 no email
+GET localhost:8080/userDetails-2/no-email
+
+### GET users details
+GET localhost:8080/userDetails-2/test@gmail.com
