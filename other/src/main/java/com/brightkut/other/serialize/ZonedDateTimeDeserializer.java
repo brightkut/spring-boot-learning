@@ -1,6 +1,5 @@
 package com.brightkut.other.serialize;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
@@ -19,6 +18,6 @@ public class ZonedDateTimeDeserializer extends JsonDeserializer<ZonedDateTime> {
         String date = p.getText();
         LocalDate localDate = LocalDate.parse(date, dateTimeFormatter);
         // Convert LocalDate to ZonedDateTime, assuming the default time as start of the day and default timezone
-        return localDate.atStartOfDay(ZoneId.systemDefault());
+        return localDate.atStartOfDay(ZoneId.of("Asia/Bangkok"));
     }
 }
