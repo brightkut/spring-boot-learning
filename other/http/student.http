@@ -1,0 +1,13 @@
+### GET Student
+GET localhost:8080/students
+
+### Create Student
+
+POST localhost:8080/students
+Content-Type: application/json
+
+{
+  "name": "Boby",
+  "age": 18,
+  "birthDate": "01-12-2024"
+}
