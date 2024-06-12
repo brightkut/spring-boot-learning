@@ -1,0 +1,12 @@
+### readJsonFileToProduct ###
+GET localhost:8080/json
+
+
+### convertProductToString
+POST localhost:8080/json
+Content-Type: application/json
+
+{
+  "name": "Apple 2",
+  "price": 200
+}
