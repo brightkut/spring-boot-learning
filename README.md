@@ -60,12 +60,16 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 
 ## Learn Spring Other
 
-### Topic (Product)
+### Topic JSON (Product)
 - @JsonProperty
 
-### Topic (User)
+### Topic JSON (User)
 - @JsonIgnore
 - @JsonIgnoreProperties
 - @JsonInclude
+
+### Topic Object Mapper
+- Read json file and convert to object
+- Convert json object to string
 
 
