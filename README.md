@@ -72,4 +72,16 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - Read json file and convert to object
 - Convert json object to string
 
+### Topic Java Time (time package)
+- Build-in function for java time
+- Describe LocalDate, LocalTime, LocalDateTime, ZonedDateTime
+- Calculate Period of time (Period, ChronoUnit, Duration)
+
+### Topic Java Time (Student)
+- Custom Serializer and Deserializer
+- @JsonSerialize/@JsonDeserialize 
+
+### Topic Java Time (Teacher)
+- @JsonFormat
+
 
