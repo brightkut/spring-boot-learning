@@ -3,6 +3,7 @@ package com.brightkut.other.mapstruct;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
+// componentModel = "spring" -> for create spring bean and inject via @Autowired
 @Mapper(componentModel = "spring")
 public interface HumanMapper {
 
