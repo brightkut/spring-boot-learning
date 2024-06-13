@@ -1,0 +1,10 @@
+### Create Human
+POST localhost:8080/humans
+Content-Type: application/json
+
+{
+  "name": "Boby",
+  "age": 12
+}
+
+###

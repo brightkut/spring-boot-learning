@@ -6,7 +6,7 @@ This project will explain about the best practices and technique that you can us
 - Microservice
 - Concurrency
 - Caching
-- Other(TODO)(JsonAnnotation, Mapstruct, ObjectMapper, Custom Serializer/Deserializer, Time)
+- Other
 - Security (TO DO)
 - Testing (TO DO)
 
