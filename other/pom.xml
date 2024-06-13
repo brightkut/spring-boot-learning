@@ -58,7 +58,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<!-- Add this plugin to build mapstruct-->
+			<!-- Add this plugin to build mapstruct with mvn clean install-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
