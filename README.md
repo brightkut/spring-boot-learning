@@ -84,4 +84,8 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 ### Topic Java Time (Teacher)
 - @JsonFormat
 
+### Topic MapStruct (Human)
+- How to use mapstruct to create mapper via @Mapper and @Mapping
+- Configure pom.xml to build mapper implemented class from `mvn clean install`
+
 
