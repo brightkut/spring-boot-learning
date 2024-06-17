@@ -46,7 +46,8 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 ## Learn Spring With Concurrency
 
 - Performance of CompletableFuture(Parallelism) vs Normal Process
-- Custom Task Executor (configure thread pool) 
+- Custom Task Executor (configure thread pool)
+- Describe about why we didn't use @Async
 
 ## Learn Spring Caching
 
