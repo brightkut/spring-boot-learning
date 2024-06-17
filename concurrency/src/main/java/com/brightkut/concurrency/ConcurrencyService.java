@@ -17,6 +17,7 @@ public class ConcurrencyService {
         this.taskExecutor = taskExecutor;
     }
 
+    // We didn't add @Async because we manually manage the executor service
     public String doConcurrencyProcess() {
         Instant start = Instant.now();
         // Perform Parallelism task
