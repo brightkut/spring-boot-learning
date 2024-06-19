@@ -93,4 +93,7 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - Create custom Annotation
 - Create AOP @Aspect for custom annotation
 
+### Topic Generate Report
+- used Jasper to generate report (pdf,xls,html)
+
 

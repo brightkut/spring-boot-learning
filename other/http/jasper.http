@@ -1,0 +1,4 @@
+### Generate PDF
+GET localhost:8080/jaspers/pdf
+
+###
