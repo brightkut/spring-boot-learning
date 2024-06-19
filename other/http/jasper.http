@@ -2,3 +2,6 @@
 GET localhost:8080/jaspers/pdf
 
 ###
+
+### Generate XLS
+GET localhost:8080/jaspers/xls

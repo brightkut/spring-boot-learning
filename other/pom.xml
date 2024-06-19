@@ -49,6 +49,13 @@
 			<version>6.20.0</version>
 		</dependency>
 
+		<!-- Jasper generate report xls -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.1.0</version> <!-- Adjust version as needed -->
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
 		<dependency>

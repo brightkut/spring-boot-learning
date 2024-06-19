@@ -17,6 +17,11 @@ public class JasperController {
 
     @GetMapping("/pdf")
     public String generatePdfReport() throws Exception {
-        return jasperService.exportReport();
+        return jasperService.exportPdfReport();
+    }
+
+    @GetMapping("/xls")
+    public String generateXlsReport() throws Exception {
+        return jasperService.exportXlsReport();
     }
 }
