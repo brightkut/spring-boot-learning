@@ -69,7 +69,7 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - @JsonIgnoreProperties
 - @JsonInclude
 
-### Topic Object Mapper
+### Topic Object Mapper (Product)
 - Read json file and convert to object
 - Convert json object to string
 
@@ -88,5 +88,9 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 ### Topic MapStruct (Human)
 - How to use mapstruct to create mapper via @Mapper and @Mapping
 - Configure pom.xml to build mapper implemented class from `mvn clean install`
+
+### Topic Custom Annotation
+- Create custom Annotation
+- Create AOP @Aspect for custom annotation
 
 
