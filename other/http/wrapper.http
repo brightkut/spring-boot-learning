@@ -1,0 +1,11 @@
+### Test Performance Wrapper
+GET localhost:8080/wrapper-test/wrapper
+###
+
+### Test Performance Wrapper2
+GET localhost:8080/wrapper-test/wrapper2
+###
+
+### Test Performance Primitive
+GET localhost:8080/wrapper-test/primitive
+###
