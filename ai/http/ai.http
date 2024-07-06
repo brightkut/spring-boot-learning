@@ -1,0 +1,8 @@
+### GET Ask AI Text
+POST localhost:8080/ai/ask-txt
+Content-Type: application/json
+
+{
+  "message": "What is spring boot ?"
+}
+###

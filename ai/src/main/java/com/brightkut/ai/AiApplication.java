@@ -11,6 +11,3 @@ public class AiApplication {
 	}
 
 }
-
-
-//sk-proj-HhenzS3OWZShv5HikBWgT3BlbkFJitT3yo5883VUCTJFu1sg
