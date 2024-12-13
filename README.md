@@ -100,6 +100,3 @@ You can look into this repository (https://github.com/brightkut/e-commerce-sprin
 - Test performance between Wrapper class and primitive via Profiler Intelij tool
 
 ### Topic Virtual Thread (TO DO)
-
-
-## Learn Spring AI (Required Credit To Use GPT)
