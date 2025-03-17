@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: jpa
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate:
+        connection:
+          provider_class: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 50000
+      idle-timeout: 300000
+      max-lifetime: 900000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      pool-name: ConnPool
+
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE

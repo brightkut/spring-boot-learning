@@ -1,7 +1,7 @@
 ## Learn Spring JPA
 
 ### Package (Product)
-- Setup DB configuration for JPA
+- We setup DB configuration for JPA in `application.yml` (for the definition we write in `sample-application.properties`)
 - We create `findTop2ByOrderByPriceDesc` function using a Build-in query of JPA (1) Top (2) OrderBy
 - We use projection technique with `java record` to improve performance (Query only necessary field)
 
