@@ -23,14 +23,14 @@ public class ConcurrencyService {
         // Perform Parallelism task
         // add taskExecutor = to custom config thread pool (use case: we need to concern about CPU/IO)
         CompletableFuture<String> future = CompletableFuture.supplyAsync(this::doProcess1, taskExecutor)
-                .exceptionally(ex-> "error1");
+                .exceptionally(_ -> "error1");
         CompletableFuture<String> future2 = CompletableFuture.supplyAsync(this::doProcess2, taskExecutor)
-                .exceptionally(ex-> "error2");
+                .exceptionally(_ -> "error2");
         CompletableFuture<String> future3 = CompletableFuture.supplyAsync(this::doProcess3, taskExecutor)
-                .exceptionally(ex-> "error3");
+                .exceptionally(_ -> "error3");
 
         CompletableFuture<Void> allCompleted = CompletableFuture.allOf(future,future2,future3);
-        allCompleted.join();// this one will block current thread until  future,future2,future3 done.
+        allCompleted.join();// this one will block the current thread until future, future2,future3 done.
 
         String r1 = future.join();
         String r2 = future2.join();
