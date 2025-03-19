@@ -1,4 +1,4 @@
-package com.brightkut.caching;
+package com.brightkut.caching.redis;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

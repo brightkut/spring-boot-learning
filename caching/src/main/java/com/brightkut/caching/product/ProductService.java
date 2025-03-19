@@ -1,4 +1,4 @@
-package com.brightkut.caching;
+package com.brightkut.caching.product;
 
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;

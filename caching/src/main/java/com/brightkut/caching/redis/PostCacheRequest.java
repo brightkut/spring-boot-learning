@@ -1,4 +1,4 @@
-package com.brightkut.caching;
+package com.brightkut.caching.redis;
 
 import lombok.Data;
 

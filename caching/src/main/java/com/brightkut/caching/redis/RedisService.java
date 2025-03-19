@@ -1,4 +1,4 @@
-package com.brightkut.caching;
+package com.brightkut.caching.redis;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.cache.RedisCacheManager;

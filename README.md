@@ -23,16 +23,6 @@ This project will explain about the best practices and technique that you can us
 - Testing (TO DO)
 
 
-## Learn Spring Caching
-
-### Topic (Redis)
-- Describe how to use each Annotation for caching
-
-### Topic (Product)
-- @Cacheable in real life (for get)
-- @CachePut in real life (for insert/update)
-- @CacheEvict in real life (for delete)
-
 ## Learn Spring Other
 
 ### Topic JSON (Product)
