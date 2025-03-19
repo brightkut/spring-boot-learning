@@ -1,4 +1,4 @@
-package com.brightkut.other.json;
+package com.brightkut.json.json;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.brightkut.other.json;
+package com.brightkut.json.json;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

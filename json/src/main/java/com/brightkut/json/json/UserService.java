@@ -1,4 +1,4 @@
-package com.brightkut.other.json;
+package com.brightkut.json.json;
 
 import org.springframework.stereotype.Service;
 
