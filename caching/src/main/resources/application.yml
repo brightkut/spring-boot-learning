@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: caching
+  data:
+    redis:
+      host: localhost
+      port: 6379
