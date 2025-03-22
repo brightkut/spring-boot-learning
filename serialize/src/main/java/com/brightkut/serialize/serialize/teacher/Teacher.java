@@ -1,4 +1,4 @@
-package com.brightkut.other.serialize;
+package com.brightkut.serialize.serialize.teacher;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;

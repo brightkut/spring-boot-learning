@@ -1,4 +1,4 @@
-package com.brightkut.other.serialize;
+package com.brightkut.serialize.serialize;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;

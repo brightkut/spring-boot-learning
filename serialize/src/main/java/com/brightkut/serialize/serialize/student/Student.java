@@ -1,6 +1,7 @@
-package com.brightkut.other.serialize;
+package com.brightkut.serialize.serialize.student;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.brightkut.serialize.serialize.ZonedDateTimeDeserializer;
+import com.brightkut.serialize.serialize.ZonedDateTimeSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Data;

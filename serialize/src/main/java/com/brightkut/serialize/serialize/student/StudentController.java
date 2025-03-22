@@ -1,4 +1,4 @@
-package com.brightkut.other.serialize;
+package com.brightkut.serialize.serialize.student;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
