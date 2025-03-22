@@ -22,6 +22,8 @@ This project will explain about the best practices and technique that you can us
 - Java Time (Function to calculate time, LocalDate, LocalTime, LocalDateTime, ZonedDateTime, Period function , ChronoUnit function, Duration function)
 - Serializer / Deserializer
 - Object Mapper
+- Mapstruct
+- Jasper
 - Other
 - Security (TO DO)
 - Testing (TO DO)

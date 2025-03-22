@@ -1,4 +1,4 @@
-package com.brightkut.other.jasper;
+package com.brightkut.jasper.jasper;
 
 import lombok.Data;
 import lombok.experimental.Accessors;

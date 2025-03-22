@@ -1,4 +1,4 @@
-package com.brightkut.other.jasper;
+package com.brightkut.jasper.jasper;
 
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
