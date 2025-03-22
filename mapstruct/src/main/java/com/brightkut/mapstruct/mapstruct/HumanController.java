@@ -1,6 +1,5 @@
-package com.brightkut.other.mapstruct;
+package com.brightkut.mapstruct.mapstruct;
 
-import com.brightkut.other.annotation.PrintHello;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +18,6 @@ public class HumanController {
     }
 
     @GetMapping
-    @PrintHello
     public ResponseEntity<String> test() {
         return ResponseEntity.ok("Test Human");
     }

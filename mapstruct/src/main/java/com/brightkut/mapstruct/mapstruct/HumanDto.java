@@ -1,4 +1,4 @@
-package com.brightkut.other.mapstruct;
+package com.brightkut.mapstruct.mapstruct;
 
 import lombok.Data;
 
