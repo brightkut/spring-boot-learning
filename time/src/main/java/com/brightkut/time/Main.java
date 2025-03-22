@@ -1,4 +1,4 @@
-package com.brightkut.other.time;
+package com.brightkut.time;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;

@@ -18,7 +18,8 @@
 	<modules>
 		<module>jpa</module>
 		<module>json</module>
-	</modules>
+        <module>time</module>
+    </modules>
 
 	<properties>
 		<java.version>22</java.version>

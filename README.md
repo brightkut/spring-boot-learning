@@ -18,20 +18,13 @@ This project will explain about the best practices and technique that you can us
 
 - Concurrency
 - Caching
+- Json (@JsonProperty, @JsonIgnore, @JsonIgnoreProperties and @JsonInclude)
 - Other
 - Security (TO DO)
 - Testing (TO DO)
 
 
 ## Learn Spring Other
-
-### Topic JSON (Product)
-- @JsonProperty
-
-### Topic JSON (User)
-- @JsonIgnore
-- @JsonIgnoreProperties
-- @JsonInclude
 
 ### Topic Object Mapper (Product)
 - Read json file and convert to object
