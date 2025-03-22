@@ -19,6 +19,9 @@ This project will explain about the best practices and technique that you can us
 - Concurrency
 - Caching
 - Json (@JsonProperty, @JsonIgnore, @JsonIgnoreProperties and @JsonInclude)
+- Java Time (Function to calculate time, LocalDate, LocalTime, LocalDateTime, ZonedDateTime, Period function , ChronoUnit function, Duration function)
+- Serializer / Deserializer
+- Object Mapper
 - Other
 - Security (TO DO)
 - Testing (TO DO)

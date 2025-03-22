@@ -1,4 +1,4 @@
-package com.brightkut.other.object_mapper;
+package com.brightkut.object_mapper.object_mapper;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.brightkut.other.object_mapper;
+package com.brightkut.object_mapper.object_mapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
