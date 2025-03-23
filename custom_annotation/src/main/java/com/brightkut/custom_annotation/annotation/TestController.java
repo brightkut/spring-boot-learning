@@ -1,4 +1,4 @@
-package com.brightkut.other.annotation;
+package com.brightkut.custom_annotation.annotation;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping
-    @PrintHello
+    @PrintHello(times = 5)
     ResponseEntity<String> test(){
         System.out.println("Method Running");
         return ResponseEntity.ok("Test pass");

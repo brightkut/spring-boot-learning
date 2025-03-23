@@ -1,4 +1,4 @@
-package com.brightkut.other.annotation;
+package com.brightkut.custom_annotation.annotation;
 
 
 import org.aspectj.lang.ProceedingJoinPoint;
