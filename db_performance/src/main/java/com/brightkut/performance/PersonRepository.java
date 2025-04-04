@@ -1,12 +1,16 @@
 package com.brightkut.performance;
 
+import jakarta.persistence.QueryHint;
+import org.hibernate.jpa.AvailableHints;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.QueryHints;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public interface PersonRepository extends JpaRepository<Person, Long> {
 
@@ -20,6 +24,13 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
             @Param("lastName") String lastName,
             @Param("age") int age
     );
+
+    @QueryHints({
+            @QueryHint(name = AvailableHints.HINT_FETCH_SIZE, value = "500"),
+            @QueryHint(name = AvailableHints.HINT_CACHEABLE, value = "false")
+    })
+    @Query("SELECT p FROM  Person p")
+    Stream<Person> findAllStream();
 
     @Modifying
     @Query("DELETE FROM Person p where p.firstName = :firstName")

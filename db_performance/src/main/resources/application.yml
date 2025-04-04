@@ -25,7 +25,7 @@ spring:
       connection-timeout: 50000
       idle-timeout: 300000
       max-lifetime: 900000
-      maximum-pool-size: 10
+      maximum-pool-size: 50
       minimum-idle: 10
       pool-name: ConnPool
 
