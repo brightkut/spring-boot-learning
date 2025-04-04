@@ -18,7 +18,8 @@
 	<modules>
 		<module>jpa</module>
 		<module>json</module>
-        <module>time</module>
+    <module>time</module>
+    <module>db_performance</module>
     </modules>
 
 	<properties>

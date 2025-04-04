@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: performance
+  flyway:
+    enabled: true
+    clean-disabled: false
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        connection:
+          provider_class: com.zaxxer.hikari.hibernate.HikariConnectionProvider
+        format_sql: true
+        generate_statistics: true # use this config to monitor query time
+        jdbc:
+          batch_size: 10 # add this to support batch insert
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+#    //?reWriteBatchedInserts=true
+    username: myuser
+    password: secret
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 50000
+      idle-timeout: 300000
+      max-lifetime: 900000
+      maximum-pool-size: 10
+      minimum-idle: 10
+      pool-name: ConnPool
+
+logging:
+  level:
+    com.zaxxer.hikari.HikariConfig: DEBUG
+    com.zaxxer.hikari: TRACE
