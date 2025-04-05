@@ -15,15 +15,16 @@
 	<name>springboot-learning</name>
 	<description>springboot-learning</description>
 
-	<modules>
-		<module>jpa</module>
-		<module>json</module>
-    <module>time</module>
-    <module>db_performance</module>
+    <modules>
+        <module>jpa</module>
+        <module>json</module>
+        <module>time</module>
+        <module>db_performance</module>
+        <module>lock</module>
     </modules>
 
 	<properties>
-		<java.version>22</java.version>
+		<java.version>21</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
