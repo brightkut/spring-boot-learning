@@ -43,6 +43,37 @@ public class BookingService {
 
     }
 
+    public void testPessimistic(Long seatId) throws InterruptedException {
+        Thread user1 = new Thread(() -> {
+            try {
+                System.out.println(Thread.currentThread().getName() + "is attempting to book seat");
+                Seat seat = bookSeatPessimistc(seatId);
+                System.out.println(
+                        Thread.currentThread().getName() + "is booking successfully with seatId: " + seat.getId());
+            } catch (Exception e) {
+                System.out.println(
+                        Thread.currentThread().getName() + "is failed when booking with message: " + e.getMessage());
+            }
+        });
+        Thread user2 = new Thread(() -> {
+            try {
+                System.out.println(Thread.currentThread().getName() + "is attempting to book seat");
+                Seat seat = bookSeatPessimistc(seatId);
+                System.out.println(
+                        Thread.currentThread().getName() + "is booking successfully with seatId" + seat.getId());
+            } catch (Exception e) {
+                System.out.println(
+                        Thread.currentThread().getName() + "is failed when booking with message: " + e.getMessage());
+            }
+        });
+
+        user1.start();
+        user2.start();
+        user1.join();
+        user2.join();
+
+    }
+
     @Transactional
     public Seat bookSeatOptimistic(Long seatId) {
         Seat seat = seatRepository.findById(seatId).orElseThrow(() -> new RuntimeException("Seat not found"));
@@ -50,6 +81,22 @@ public class BookingService {
         System.out.println(Thread.currentThread().getName() + " fetch seat from DB with verion: " + seat.getVersion());
 
         if (seat.isBooked()) {
+            throw new RuntimeException("Seat is already booked.");
+        }
+
+        seat.setBooked(true);
+
+        return seatRepository.save(seat);
+    }
+
+    @Transactional
+    public Seat bookSeatPessimistc(Long seatId) {
+        Seat seat = seatRepository.findByIdAndLock(seatId);
+
+        System.out.println(Thread.currentThread().getName() + "is start locking seat with seatId: " + seatId);
+
+        if (seat.isBooked()) {
+            System.out.println(Thread.currentThread().getName() + "is failed because seat already booked.");
             throw new RuntimeException("Seat is already booked.");
         }
 
