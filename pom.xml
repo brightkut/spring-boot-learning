@@ -21,6 +21,7 @@
         <module>time</module>
         <module>db_performance</module>
         <module>lock</module>
+        <module>gzip</module>
     </modules>
 
 	<properties>
