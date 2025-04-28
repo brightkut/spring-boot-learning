@@ -2,7 +2,6 @@
 
 This project will explain about the best practices and technique that you can use in springboot. Including
 
-- JPA
 - Microservice (You can look into this repository (https://github.com/brightkut/e-commerce-springboot).)
 
 ```
@@ -15,50 +14,21 @@ This project will explain about the best practices and technique that you can us
 6. Create Email Template from Html (Thymeleaf)
 7. Distribute tracing (Zipkin)
 ```
-
-- Concurrency
+- AI (In Progress)
 - Caching
-- Json (@JsonProperty, @JsonIgnore, @JsonIgnoreProperties and @JsonInclude)
-- Java Time (Function to calculate time, LocalDate, LocalTime, LocalDateTime, ZonedDateTime, Period function , ChronoUnit function, Duration function)
-- Serializer / Deserializer
-- Object Mapper
-- Mapstruct
+- Concurrency
+- Custom Annotation
+- DB Performance (Pending README.md)
+- GZip (Pending README.md)
 - Jasper
-- Other
+- JPA
+- JSON
+- Lock (Pending README.md)
+- Mapstruct
+- Object Mapper
+- Serialize
+- Thread (Pending)
+- Time
+- Wrapper Class Performance
 - Security (TO DO)
 - Testing (TO DO)
-
-
-## Learn Spring Other
-
-### Topic Object Mapper (Product)
-- Read json file and convert to object
-- Convert json object to string
-
-### Topic Java Time (time package)
-- Build-in function for java time
-- Describe LocalDate, LocalTime, LocalDateTime, ZonedDateTime
-- Calculate Period of time (Period, ChronoUnit, Duration)
-
-### Topic Java Time (Student)
-- Custom Serializer and Deserializer
-- @JsonSerialize/@JsonDeserialize 
-
-### Topic Java Time (Teacher)
-- @JsonFormat
-
-### Topic MapStruct (Human)
-- How to use mapstruct to create mapper via @Mapper and @Mapping
-- Configure pom.xml to build mapper implemented class from `mvn clean install`
-
-### Topic Custom Annotation (Annotation)
-- Create custom Annotation
-- Create AOP @Aspect for custom annotation
-
-### Topic Generate Report (Jasper)
-- used Jasper to generate report (pdf,xls,html)
-
-### Topic Wrapper (Wrapper_Test)
-- Test performance between Wrapper class and primitive via Profiler Intelij tool
-
-### Topic Virtual Thread (TO DO)
