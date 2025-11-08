@@ -4,6 +4,7 @@ spring:
   flyway:
     enabled: true
     clean-disabled: false
+    baseline-on-migrate: true
   jpa:
     show-sql: true
     properties:
@@ -15,10 +16,10 @@ spring:
         jdbc:
           batch_size: 10 # add this to support batch insert
   datasource:
-    url: jdbc:postgresql://localhost:5432/mydatabase
+    url: jdbc:postgresql://localhost:5432/mydb
 #    //?reWriteBatchedInserts=true
-    username: myuser
-    password: secret
+    username: postgres
+    password: admin
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.postgresql.Driver
     hikari:

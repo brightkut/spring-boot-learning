@@ -33,7 +33,6 @@ public class PerformanceApplication implements ApplicationRunner {
     @PersistenceContext
     private EntityManager entityManager;
 
-
     public PerformanceApplication(Flyway flyway, PersonRepository personRepository) {
         this.flyway = flyway;
         this.personRepository = personRepository;
@@ -46,7 +45,7 @@ public class PerformanceApplication implements ApplicationRunner {
     @PreDestroy
     public void cleanDatabaseOnShutdown() {
         System.out.println("Cleaning database with Flyway...");
-        flyway.clean();  // Drops all objects managed by Flyway
+        flyway.clean(); // Drops all objects managed by Flyway
     }
 
     @Override
@@ -54,48 +53,51 @@ public class PerformanceApplication implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
         // #1
-//        var persons = personRepository.findByFirstName("First9999");
-//        System.out.println("Person id : "+ persons.get().getId());
+        // var persons = personRepository.findByFirstName("First9999");
+        // System.out.println("Person id : "+ persons.get().getId());
 
-//        personRepository.deleteByFirstName("First9999");
+        // personRepository.deleteByFirstName("First9999");
 
         // #2
-//        personRepository.deleteByFirstNameIn(listOfFirstName());
+        // personRepository.deleteByFirstNameIn(listOfFirstName());
 
-//        System.out.println("Number of records : " + personRepository.count());
+        // System.out.println("Number of records : " + personRepository.count());
 
-        // ------------ Don't forget to check in application.yml If want to use bulk insert ------------
+        // ------------ Don't forget to check in application.yml If want to use bulk
+        // insert ------------
         // #3 Bulk Insert this will use saveAll(), require to implement Persistable and
         // update isNew() to true for prevent select statement
-//        bulkInsertSaveAll();
+        // bulkInsertSaveAll();
 
         // #4 Bulk Insert2 this is use native query
-//        bulkInsertNativeQuery();
+        // bulkInsertNativeQuery();
 
-        // ------------ Don't forget to update V2.sql in flyway for testing to align with test condition ------------
+        // ------------ Don't forget to update V2.sql in flyway for testing to align
+        // with test condition ------------
         // #5 findAll 5,000,000 records
-//          findLargeResult();
+        // findLargeResult();
 
-//        #5 findAll 5,000,000 records but lower memory
-//        findLargeResult2();
+        // #5 findAll 5,000,000 records but lower memory
+        // findLargeResult2();
 
-        //#5 findAll 5,000,000 records
-        findLargeResult3();
+        // #5 findAll 5,000,000 records
+        // findLargeResult3();
 
     }
 
-    private long findAllPersonStream(){
+    private long findAllPersonStream() {
         AtomicLong totalPerson = new AtomicLong();
-        try(Stream<Person> persons = personRepository.findAllStream()) {
+        try (Stream<Person> persons = personRepository.findAllStream()) {
             persons.forEach((_) -> {
-                totalPerson.getAndIncrement();});
+                totalPerson.getAndIncrement();
+            });
             entityManager.clear();
         }
 
         return totalPerson.longValue();
     }
 
-    private long findAllPersonPagination(){
+    private long findAllPersonPagination() {
         int page = 0;
         int batchSize = 500;
         Page<Person> personPage;
@@ -107,7 +109,8 @@ public class PerformanceApplication implements ApplicationRunner {
             personPage = personRepository.findAll(pageable);
 
             List<Person> persons = personPage.getContent();
-            if (persons.isEmpty()) break; // Stop if no more records
+            if (persons.isEmpty())
+                break; // Stop if no more records
 
             totalPerson += persons.size();
             page++; // Move to the next batch
@@ -116,57 +119,59 @@ public class PerformanceApplication implements ApplicationRunner {
         return totalPerson;
     }
 
-    private List<String> listOfFirstName(){
+    private List<String> listOfFirstName() {
         var firstNames = new ArrayList<String>();
 
         int c = 1000;
 
-        for(int i = 1; i <= c; i++) {
-            firstNames.add("First"+i);
+        for (int i = 1; i <= c; i++) {
+            firstNames.add("First" + i);
         }
 
         return firstNames;
     }
 
-    private void findLargeResult(){
+    private void findLargeResult() {
         /*
-        Execution time: 15303 milliseconds (15 seconds)
-        Used memory is bytes: 2039092928
-        Used memory is megabytes: 1944
-        Persons count: 5000000
-        */
+         * Execution time: 15303 milliseconds (15 seconds)
+         * Used memory is bytes: 2039092928
+         * Used memory is megabytes: 1944
+         * Persons count: 5000000
+         */
         var persons = measureExecutionTime(personRepository::findAll);
         printMemoryUsed();
         System.out.println("Persons count: " + persons.size());
     }
 
-    private void findLargeResult2(){
-        /*   Execution time: 20129 milliseconds (20 seconds)
-             Used memory is bytes: 98675768
-             Used memory is megabytes: 94
-             Persons count: 5000000
+    private void findLargeResult2() {
+        /*
+         * Execution time: 20129 milliseconds (20 seconds)
+         * Used memory is bytes: 98675768
+         * Used memory is megabytes: 94
+         * Persons count: 5000000
          */
         var totalPersons = measureExecutionTime(this::findAllPersonStream);
         printMemoryUsed();
         System.out.println("Persons count: " + totalPersons);
     }
 
-    private void findLargeResult3(){
-        /*   took so long time and high memory used
+    private void findLargeResult3() {
+        /*
+         * took so long time and high memory used
          */
         var totalPersons = measureExecutionTime(this::findAllPersonPagination);
         printMemoryUsed();
         System.out.println("Persons count: " + totalPersons);
     }
 
-    private void bulkInsertSaveAll(){
+    private void bulkInsertSaveAll() {
         var persons = getPerson();
 
-        for(int i = 0 ; i < 10 ; i++){
+        for (int i = 0; i < 10; i++) {
             var person = Person.builder()
                     .id((long) i)
-                    .firstName("Boby"+i)
-                    .lastName("Tomus"+i)
+                    .firstName("Boby" + i)
+                    .lastName("Tomus" + i)
                     .age(i)
                     .build();
 
@@ -176,7 +181,7 @@ public class PerformanceApplication implements ApplicationRunner {
         personRepository.saveAll(persons);
     }
 
-    private void bulkInsertNativeQuery(){
+    private void bulkInsertNativeQuery() {
         var persons = getPerson();
 
         StringBuilder sqlBuilder = new StringBuilder("INSERT INTO Person (id, first_name, last_name, age) VALUES ");
@@ -205,14 +210,14 @@ public class PerformanceApplication implements ApplicationRunner {
         query.executeUpdate();
     }
 
-    private List<Person> getPerson(){
+    private List<Person> getPerson() {
         var persons = new ArrayList<Person>();
 
-        for(int i = 0 ; i < 10 ; i++){
+        for (int i = 0; i < 10; i++) {
             var person = Person.builder()
                     .id((long) i)
-                    .firstName("Boby"+i)
-                    .lastName("Tomus"+i)
+                    .firstName("Boby" + i)
+                    .lastName("Tomus" + i)
                     .age(i)
                     .build();
 
